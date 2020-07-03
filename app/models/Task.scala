@@ -10,7 +10,7 @@ import skinny.orm._
   * Task
   */
 // body:タスク内容, deadline:タスク期限
-case class Task(id:Option[Long], body:String, deadline:String, details:String , createAt:ZonedDateTime, updateAt:ZonedDateTime)
+case class Task(id:Option[Long], body:String, deadline:String, details:Option[String] , createAt:ZonedDateTime, updateAt:ZonedDateTime)
 
 object Task extends SkinnyCRUDMapper[Task]{
   override def tableName = "tasks"
