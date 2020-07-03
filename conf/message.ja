@@ -8,6 +8,7 @@ DeleteTask=タスク削除
 GetTasks=タスク一覧
 GetTask=タスク詳細
 Details=詳細
+Status=状態
 
 CreateTaskError=タスク作成エラーが発生しました。
 UpdateTaskError=タスク更新エラーが発生しました

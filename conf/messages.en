@@ -8,6 +8,7 @@ DeleteTask=Delete Task
 GetTasks=Tasks
 GetTask=Task Detail
 Details=Details
+Status=Status
 
 CreateTaskError=Task creation error
 UpdateTaskError=Task update error

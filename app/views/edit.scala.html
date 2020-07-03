@@ -9,9 +9,10 @@
       <div class="col-xs-6">
         @b3.formCSRF(routes.UpdateTaskController.update){
           @b3.hidden(taskForm("id").name, taskForm("id").value.get)
-          @b3.text(taskForm("body"), 'label -> "Task")
+          @b3.text(taskForm("body"),     'label -> "Task")
           @b3.text(taskForm("deadline"), 'label -> "DeadLine")
-          @b3.text(taskForm("details"), 'label -> "Details")
+          @b3.text(taskForm("status"),   'label -> "Status")
+          @b3.text(taskForm("details"),  'label -> "Details")
           @b3.submit('class -> "btn btn-default"){
             @Messages("UpdateTask")
           }

@@ -11,6 +11,7 @@ trait TaskControllerSupport { this: AbstractController =>
       "id"       -> optional(longNumber),
       "body"     -> nonEmptyText,
       "deadline" -> nonEmptyText,
+      "status"   -> nonEmptyText,
       "details"  -> text
     )(TaskForm.apply)(TaskForm.unapply)
   )
