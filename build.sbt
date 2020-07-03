@@ -22,7 +22,8 @@ libraryDependencies ++= Seq(
   "org.skinny-framework"    %% "skinny-orm"                       % "2.3.7",
   "org.scalikejdbc"         %% "scalikejdbc-play-initializer"     % "2.6.+",
   "ch.qos.logback"          % "logback-classic"                   % "1.2.3",
-  "mysql"                   % "mysql-connector-java"              % "6.0.6"
+  "mysql"                   % "mysql-connector-java"              % "6.0.6",
+  "com.adrianhurt"          %% "play-bootstrap"                    % "1.2-P26-B3"
 )
 
 lazy val envConfig = settingKey[Config]("env-config")
@@ -37,6 +38,10 @@ flywayDriver := envConfig.value.getString("jdbcDriver")
 flywayUrl := envConfig.value.getString("jdbcUrl")
 flywayUser := envConfig.value.getString("jdbcUserName")
 flywayPassword := envConfig.value.getString("jdbcPassword")
+
+TwirlKeys.templateImports ++= Seq("forms._")
+
+libraryDependencies += "javax.xml.bind" % "jaxb-api" % "2.2.12"
 
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "com.example.controllers._"
